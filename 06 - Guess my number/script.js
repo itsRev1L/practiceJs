@@ -12,7 +12,6 @@ document.querySelector(".check").addEventListener("click", function () {
     //if number is higher than 0
   } else if (inputGuess > guessNumber) {
     if (gameScore > 0) {
-      test;
       //and if number is equal to 1 do this
       if (gameScore == 1) {
         document.querySelector(".message").textContent = "game over";
