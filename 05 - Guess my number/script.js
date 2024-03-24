@@ -41,3 +41,11 @@ document.querySelector(".check").addEventListener("click", function () {
     }
   }
 });
+document.querySelector(".again").addEventListener("click", function () {
+  gameScore = 20;
+  document.querySelector(".score").textContent = gameScore;
+  guessNumber;
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".guess").value = "";
+  document.querySelector("body").style.backgroundColor = "#222";
+});
