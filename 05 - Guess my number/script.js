@@ -1,5 +1,5 @@
 "use strict";
-const guessNumber = Math.trunc(Math.random() * 20 + 1);
+let guessNumber = Math.trunc(Math.random() * 20 + 1);
 let gameScore = 20;
 document.querySelector(".check").addEventListener("click", function () {
   const inputGuess = Number(document.querySelector(".guess").value);
@@ -43,8 +43,8 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 document.querySelector(".again").addEventListener("click", function () {
   gameScore = 20;
+  guessNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector(".score").textContent = gameScore;
-  guessNumber;
   document.querySelector(".message").textContent = "Start guessing...";
   document.querySelector(".guess").value = "";
   document.querySelector("body").style.backgroundColor = "#222";
