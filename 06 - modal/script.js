@@ -9,7 +9,8 @@ const closeSocial = function () {
   backGround.classList.add('hidden');
 };
 
-const openSocial = function () {
+const openSocial = function (i) {
+  console.log(i);
   hiddenModal.classList.remove('hidden');
   backGround.classList.remove('hidden');
 };
@@ -20,3 +21,9 @@ for (let i = 0; i < showModalBtn.length; i++) {
 
 closeBtn.addEventListener('click', closeSocial);
 backGround.addEventListener('click', closeSocial);
+
+document.addEventListener('keydown', function (i) {
+  if (i.key === 'Escape' && !backGround.classList.contains('hidden')) {
+    closeSocial();
+  }
+});
